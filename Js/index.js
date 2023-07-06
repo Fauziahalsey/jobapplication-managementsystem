@@ -3,8 +3,7 @@ document.querySelector('.btn-primary').addEventListener('click', fetchMoreJobs);
 
 function fetchMoreJobs() {
   // Perform an AJAX request to the API endpoint
-  // Replace 'YOUR_API_KEY' with your actual API key
-  fetch('https://arbeitnow.com/api/job-board-api?api_key=YOUR_API_KEY')
+  fetch('https://arbeitnow.com/api/job-board-api')
     .then(response => response.json())
     .then(data => {
       // Process the retrieved job listings data
@@ -64,23 +63,20 @@ function submitEmail(event) {
   const email = form.querySelector('#email').value;
   const message = form.querySelector('#message').value;
 
-  // Perform an AJAX request to the API endpoint for submitting emails
-  // Replace 'YOUR_API_KEY' with your actual API key
-  fetch('https://arbeitnow.com/api/job-board-api/submit-email?api_key=YOUR_API_KEY', {
+  // Perform an AJAX request to the API endpoint for sending emails
+  fetch('https://arbeitnow.com/api/job-board-api', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({ name, email, message })
   })
-    .then(response => response.json())
-    .then(data => {
-      // Handle the response data
-      if (data.success) {
+    .then(response => {
+      if (response.ok) {
         alert('Email sent successfully!');
         form.reset();
       } else {
-        alert('Failed to send email. Please try again.');
+        throw new Error('Failed to send email.');
       }
     })
     .catch(error => {
@@ -93,15 +89,8 @@ document.querySelectorAll('.btn-apply').forEach(button => {
   button.addEventListener('click', applyForJob);
 });
 
-// function applyForJob(event) {
-//   event.preventDefault();
-
-//   const jobTitle = event.target.parentElement.querySelector('.job-title').textContent;
-
-//   // Perform an AJAX request to the API endpoint for applying to jobs
-//   // Replace 'YOUR_API_KEY' with your actual API key
-//   fetch('https://arbeitnow.com/api/job-board-api/apply-job?api_key=YOUR_API_KEY', {
-//     method: 'POST',
-//     headers: {
-//     //   'Content-Type': 'application/json'
-//     },
+function applyForJob(event) {
+  event.preventDefault();
+  // Code to handle job application
+  // ...
+}
