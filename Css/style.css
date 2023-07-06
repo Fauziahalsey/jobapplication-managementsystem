@@ -320,7 +320,10 @@ html, body {
 .contact-section {
 padding: 80px 0;
 text-align: center;
-background-color: #fff;
+background-color: #131212;
+}
+.contact-section h2{
+color: #ccc;
 }
 .contact-content {
 display: flex;
@@ -345,23 +348,24 @@ margin-top: -12rem;
 }
 .contact-title {
 font-size: 24px;
-color: #333;
+color: #f1eded;
 margin-bottom: 40px;
 }
 .contact-subtitle {
 font-size: 18px;
-color: #333;
+color: #e6e5e5;
 margin-bottom: 20px;
 }
 .contact-description {
 font-size: 16px;
-color: #666;
+color: #faf4f4;
 line-height: 1.6;
 }
 .contact-details {
 list-style: none;
 padding: 0;
 margin-bottom: 20px;
+color: #d9d9d9;
 }
 .contact-details li {
 margin-bottom: 10px;
