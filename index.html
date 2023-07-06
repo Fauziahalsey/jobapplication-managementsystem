@@ -1,84 +1,494 @@
+<!-----META SECTION----->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Job Portal</title>
-  <link rel="stylesheet" href="./Css/style.css">
-</head>
-<body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <!-- ... -->
-  </nav>
-
-  <!-- Home Section -->
-  <section class="home">
-    <div class="container">
-      <h1 class="home-title">Welcome to Job Portal</h1>
-      <p class="home-description">Find your dream job and start your career journey today.</p>
-      <a href="#" class="btn-primary">Browse Jobs</a>
-    </div>
-    <!-- Search form -->
-    <form class="search-form" action="#">
-      <input type="text" class="search-input" placeholder="Search for jobs">
-      <button type="submit">Search</button>
-    </form>
-  </section>
-  
-  <!-- About Section -->
-  <section class="about-section">
-    <div class="container">
-      <h2 class="section-title">About Us</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <h3 class="about-subtitle">Who We Are</h3>
-          <p class="about-description">We are a leading job portal dedicated to connecting job seekers with employers. Our mission is to simplify the job search process and help individuals find meaningful employment opportunities.</p>
+ <html lang="en">
+  <head>
+   <title>Search Job portal</title>
+   
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="./Css/style.css">
+   
+  </head>
+  <body>
+ <header>
+    <div class="width-100">
+      <div class="container header">
+        <div class="width-25">
+          <!-- <img src="images/logo.png"> -->
         </div>
-        <div class="about-image">
-          <img src="./imgs/pexels-vlada-karpovich-4050315.jpg" alt="About Image">
+        <div class="width-50">
+          <ul class="header-menu ">
+            <li>
+              <a href="#">Home </a>
+            </li>
+            <li>
+              <a href="#">Jobs </a>
+            </li>
+            <li>
+              <a href="#">Companies </a>
+            </li>
+            <li>
+              <a href="#">Services </a>
+            </li>
+            <li>
+              <a href="#">Contact Us </a>
+            </li>
+          </ul>
         </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Job Section -->
-  <section class="job-section">
-    <div class="container">
-      <h2 class="section-title">Latest Job Listings</h2>
-      <div class="job-listings">
-        <!-- Job Listing Item 1 -->
-        <div class="job-listing">
-          <h3 class="job-title">Frontend Developer</h3>
-          <p class="job-company">ABC Company</p>
-          <p class="job-location">City, Country</p>
-          <a href="#" class="btn-apply">Apply</a>
-        </div>
-        <!-- Job Listing Item 2 -->
-        <div class="job-listing">
-          <h3 class="job-title">Backend Developer</h3>
-          <p class="job-company">XYZ Company</p>
-          <p class="job-location">City, Country</p>
-          <a href="#" class="btn-apply">Apply</a>
-        </div>
-        <!-- Job Listing Item 3 -->
-        <div class="job-listing">
-          <h3 class="job-title">Product Manager</h3>
-          <p class="job-company">XYZ Company</p>
-          <p class="job-location">City, Country</p>
-          <a href="#" class="btn-apply">Apply</a>
-        </div>
-        <!-- Job Listing Item 4 -->
-        <div class="job-listing">
-          <h3 class="job-title">Bootstrap Developer</h3>
-          <p class="job-company">XYZ Company</p>
-          <p class="job-location">City, Country</p>
-          <a href="#" class="btn-apply">Apply</a>
+        <div class="width-25">
+          <a href="#" class="button-job-post">
+            <i class="fa fa-shopping-bag" aria-hidden="true"></i> Submit a Job </a>
+          <a href="#" class="button-resume">
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Create Resume </a>
         </div>
       </div>
     </div>
-  </section>
-
+  </header>
+  <!------SEARCH SECTION SEARCH SECTION SEARCH SECTION ------>
+<div class="width-100 banner-section">
+    <div class="container">
+      <h1 class="banner-heading">Find The Best Job For Your Future</h1>
+      <p class="banner-para">its a long established fact that a reader will be distracted by the readable</p>
+      <div class="search-sect">
+        <input type="text" class="search-textbox" placeholder="Search Company">
+      </div>
+      <div class="search-sect">
+        <input type="text" class="search-textbox" placeholder="Select Location">
+        <i class="fa fa-life-ring icons" aria-hidden="true"></i>
+      </div>
+      <div class="search-sect">
+        <input type="text" class="search-textbox" placeholder="All categories">
+        <i class="fa fa-caret-down icons" aria-hidden="true"></i>
+      </div>
+      <div class="search-sect">
+        <button class="search-button">
+          <i class="fa fa-search " aria-hidden="true"></i> Search Here </button>
+      </div>
+    </div>
+  </div>
+  <!------CATEGORY SECTION CATEGORY SECTION CATEGORY SECTION ------>
+<div class="width-100 skill-section">
+    <div class="container">
+      <div class="skill-list">
+        <div class="width-33">
+          <!-- <img class="skill-img" src="images/skill-1.png"> -->
+        </div>
+        <div class="width-66">
+          <h4>It Sector</h4>
+          <button class="view-button">7,600 jobs</button>
+        </div>
+      </div>
+      <div class="skill-list">
+        <div class="width-33">
+          <!-- <img class="skill-img" src="images/skill-2.png"> -->
+        </div>
+        <div class="width-66">
+          <h4>Call Center</h4>
+          <button class="view-button">5,000 jobs</button>
+        </div>
+      </div>
+      <div class="skill-list">
+        <div class="width-33">
+          <!-- <img class="skill-img" src="images/skill-3.png"> -->
+        </div>
+        <div class="width-66">
+          <h4>BPO</h4>
+          <button class="view-button">1,100 jobs</button>
+        </div>
+      </div>
+      <div class="skill-list">
+        <div class="width-33">
+          <!-- <img class="skill-img" src="images/skill-4.png"> -->
+        </div>
+        <div class="width-66">
+          <h4>Sales</h4>
+          <button class="view-button">2,345 jobs</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-----RECENT JOB SECTION RECENT JOB SECTION RECENT JOB SECTION ----->
+<div class="width-100 recent-job">
+    <div class="container">
+      <h2 class="recent-job-heading">RECENT JOB</h2>
+      <p class="recent-job-sub-heading">Get the list of all recent jobs</p>
+      <!-----JOB LIST----->
+      <div class="width-50">
+        <div class="recent-job-list">
+          <div class="width-100">
+            <h4 class="job-title">HTML Designer</h4>
+            <p class="job-company">Dezven Software Solution <i class="fa fa-star" aria-hidden="true"></i> | 234 Reviews </p>
+          </div>
+          <div class="width-33">
+            <i class="fa fa-briefcase" aria-hidden="true"></i> 1 to 4 Years
+          </div>
+          <div class="width-33">
+            <i class="fa fa-inr" aria-hidden="true"></i> No disclosed
+          </div>
+          <div class="width-33">
+            <i class="fa fa-map-marker" aria-hidden="true"></i> Pune
+          </div>
+          <div class="width-100">
+            <p class="job-skill">
+              <b>Skills : </b>HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP, PHOTOSHOP
+            </p>
+          </div>
+          <div class="width-100">
+            <a href="#" class="job-apply-button">Apply Now</a>
+          </div>
+        </div>
+      </div>
+      <!-----JOB LIST------>
+      <div class="width-50">
+        <div class="recent-job-list">
+          <div class="width-100">
+            <h4 class="job-title">CSS Designer</h4>
+            <p class="job-company">Dezven Group <i class="fa fa-star" aria-hidden="true"></i> | 234 Reviews </p>
+          </div>
+          <div class="width-33">
+            <i class="fa fa-briefcase" aria-hidden="true"></i> 1 to 4 Years
+          </div>
+          <div class="width-33">
+            <i class="fa fa-inr" aria-hidden="true"></i> No disclosed
+          </div>
+          <div class="width-33">
+            <i class="fa fa-map-marker" aria-hidden="true"></i> Pune
+          </div>
+          <div class="width-100">
+            <p class="job-skill">
+              <b>Skills : </b>HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP, PHOTOSHOP
+            </p>
+          </div>
+          <div class="width-100">
+            <a href="#" class="job-apply-button">Apply Now</a>
+          </div>
+        </div>
+      </div>
+      <!-----JOB LIST----->
+      <div class="width-50">
+        <div class="recent-job-list">
+          <div class="width-100">
+            <h4 class="job-title">Bootstrap Developer</h4>
+            <p class="job-company">Apple Incorporation <i class="fa fa-star" aria-hidden="true"></i> | 234 Reviews </p>
+          </div>
+          <div class="width-33">
+            <i class="fa fa-briefcase" aria-hidden="true"></i> 1 to 4 Years
+          </div>
+          <div class="width-33">
+            <i class="fa fa-inr" aria-hidden="true"></i> No disclosed
+          </div>
+          <div class="width-33">
+            <i class="fa fa-map-marker" aria-hidden="true"></i> Pune
+          </div>
+          <div class="width-100">
+            <p class="job-skill">
+              <b>Skills : </b>HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP, PHOTOSHOP
+            </p>
+          </div>
+          <div class="width-100">
+            <a href="#" class="job-apply-button">Apply Now</a>
+          </div>
+        </div>
+      </div>
+      <!-----JOB LIST----->
+      <div class="width-50">
+        <div class="recent-job-list">
+          <div class="width-100">
+            <h4 class="job-title">Javascript Developer</h4>
+            <p class="job-company">Wipro Software Sol <i class="fa fa-star" aria-hidden="true"></i> | 234 Reviews </p>
+          </div>
+          <div class="width-33">
+            <i class="fa fa-briefcase" aria-hidden="true"></i> 1 to 4 Years
+          </div>
+          <div class="width-33">
+            <i class="fa fa-inr" aria-hidden="true"></i> No disclosed
+          </div>
+          <div class="width-33">
+            <i class="fa fa-map-marker" aria-hidden="true"></i> Pune
+          </div>
+          <div class="width-100">
+            <p class="job-skill">
+              <b>Skills : </b>HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP, PHOTOSHOP
+            </p>
+          </div>
+          <div class="width-100">
+            <a href="#" class="job-apply-button">Apply Now</a>
+          </div>
+        </div>
+      </div>
+      <!-----JOB LIST----->
+      <div class="width-50">
+        <div class="recent-job-list">
+          <div class="width-100">
+            <h4 class="job-title">Graphic Designer</h4>
+            <p class="job-company">Microsoft Solution INC <i class="fa fa-star" aria-hidden="true"></i> | 234 Reviews </p>
+          </div>
+          <div class="width-33">
+            <i class="fa fa-briefcase" aria-hidden="true"></i> 1 to 4 Years
+          </div>
+          <div class="width-33">
+            <i class="fa fa-inr" aria-hidden="true"></i> No disclosed
+          </div>
+          <div class="width-33">
+            <i class="fa fa-map-marker" aria-hidden="true"></i> Pune
+          </div>
+          <div class="width-100">
+            <p class="job-skill">
+              <b>Skills : </b>HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP, PHOTOSHOP
+            </p>
+          </div>
+          <div class="width-100">
+            <a href="#" class="job-apply-button">Apply Now</a>
+          </div>
+        </div>
+      </div>
+      <!-----JOB LIST------>
+      <div class="width-50">
+        <div class="recent-job-list">
+          <div class="width-100">
+            <h4 class="job-title">jQuery Developer</h4>
+            <p class="job-company">Google Corporation <i class="fa fa-star" aria-hidden="true"></i> | 234 Reviews </p>
+          </div>
+          <div class="width-33">
+            <i class="fa fa-briefcase" aria-hidden="true"></i> 1 to 4 Years
+          </div>
+          <div class="width-33">
+            <i class="fa fa-inr" aria-hidden="true"></i> No disclosed
+          </div>
+          <div class="width-33">
+            <i class="fa fa-map-marker" aria-hidden="true"></i> Pune
+          </div>
+          <div class="width-100">
+            <p class="job-skill">
+              <b>Skills : </b>HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP, PHOTOSHOP
+            </p>
+          </div>
+          <div class="width-100">
+            <a href="#" class="job-apply-button">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------TOP COMPANY SECTION TOP COMPANY SECTION TOP COMPANY SECTION----->
+<div class="width-100 top-company">
+    <div class="container">
+      <h2 class="top-company-heading">Top Company Hiring</h2>
+      <p class="top-company-sub-heading">List of Top Company Hiring With Us</p>
+      <!-----START COMPANY LIST----->
+      <div class="width-25">
+        <div class=" company-list">
+          <div class="width-100">
+            <div class="width-25 company-image">
+              <!-- <img src="images/company-1.png"> -->
+            </div>
+            <div class="width-75">
+              <h4 class="company-name">Google Company</h4>
+              <p class="company-rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star " aria-hidden="true"></i>
+              </p>
+              <p class="company-review">( 874 Reviews)</p>
+            </div>
+          </div>
+          <div class="width-50 company-address">New York, USA</div>
+          <div class="width-50 company-opening">25 Job Opening </p>
+          </div>
+        </div>
+      </div>
+      <!-----START COMPANY LIST----->
+      <div class="width-25">
+        <div class=" company-list">
+          <div class="width-100">
+            <div class="width-25 company-image">
+              <!-- <img src="images/company-2.png"> -->
+            </div>
+            <div class="width-75">
+              <h4 class="company-name">Microsoft Company</h4>
+              <p class="company-rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star " aria-hidden="true"></i>
+              </p>
+              <p class="company-review">( 874 Reviews)</p>
+            </div>
+          </div>
+          <div class="width-50 company-address">New York, USA</div>
+          <div class="width-50 company-opening">25 Job Opening </p>
+          </div>
+        </div>
+      </div>
+      <!-----START COMPANY LIST----->
+      <div class="width-25">
+        <div class=" company-list">
+          <div class="width-100">
+            <div class="width-25 company-image">
+              <!-- <img src="images/company-3.png"> -->
+            </div>
+            <div class="width-75">
+              <h4 class="company-name">IBM Company</h4>
+              <p class="company-rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star " aria-hidden="true"></i>
+              </p>
+              <p class="company-review">( 874 Reviews)</p>
+            </div>
+          </div>
+          <div class="width-50 company-address">New York, USA</div>
+          <div class="width-50 company-opening">25 Job Opening </p>
+          </div>
+        </div>
+      </div>
+      <!-----START COMPANY LIST----->
+      <div class="width-25">
+        <div class=" company-list">
+          <div class="width-100">
+            <div class="width-25 company-image">
+              <!-- <img src="images/company-4.png"> -->
+            </div>
+            <div class="width-75">
+              <h4 class="company-name">Apple Company</h4>
+              <p class="company-rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star " aria-hidden="true"></i>
+              </p>
+              <p class="company-review">( 874 Reviews)</p>
+            </div>
+          </div>
+          <div class="width-50 company-address">New York, USA</div>
+          <div class="width-50 company-opening">25 Job Opening </p>
+          </div>
+        </div>
+      </div>
+      <!-----START COMPANY LIST----->
+      <div class="width-25">
+        <div class=" company-list">
+          <div class="width-100">
+            <div class="width-25 company-image">
+              <!-- <img src="images/company-5.png"> -->
+            </div>
+            <div class="width-75">
+              <h4 class="company-name">InfoSys Company</h4>
+              <p class="company-rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star " aria-hidden="true"></i>
+              </p>
+              <p class="company-review">( 874 Reviews)</p>
+            </div>
+          </div>
+          <div class="width-50 company-address">New York, USA</div>
+          <div class="width-50 company-opening">25 Job Opening </p>
+          </div>
+        </div>
+      </div>
+      <!-----START COMPANY LIST------>
+      <div class="width-25">
+        <div class=" company-list">
+          <div class="width-100">
+            <div class="width-25 company-image">
+              <!-- <img src="images/company-6.png"> -->
+            </div>
+            <div class="width-75">
+              <h4 class="company-name">Wipro Company</h4>
+              <p class="company-rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star " aria-hidden="true"></i>
+              </p>
+              <p class="company-review">( 874 Reviews)</p>
+            </div>
+          </div>
+          <div class="width-50 company-address">New York, USA</div>
+          <div class="width-50 company-opening">25 Job Opening </p>
+          </div>
+        </div>
+      </div>
+      <!-----START COMPANY LIST------>
+      <div class="width-25">
+        <div class=" company-list">
+          <div class="width-100">
+            <div class="width-25 company-image">
+              <!-- <img src="images/company-7.png"> -->
+            </div>
+            <div class="width-75">
+              <h4 class="company-name">HCL Company</h4>
+              <p class="company-rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star " aria-hidden="true"></i>
+              </p>
+              <p class="company-review">( 874 Reviews)</p>
+            </div>
+          </div>
+          <div class="width-50 company-address">New York, USA</div>
+          <div class="width-50 company-opening">25 Job Opening </p>
+          </div>
+        </div>
+      </div>
+      <!-----START COMPANY LIST----->
+      <div class="width-25">
+        <div class=" company-list">
+          <div class="width-100">
+            <div class="width-25 company-image">
+              <!-- <img src="images/company-8.png"> -->
+            </div>
+            <div class="width-75">
+              <h4 class="company-name">Linkedin Company</h4>
+              <p class="company-rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star " aria-hidden="true"></i>
+              </p>
+              <p class="company-review">( 874 Reviews)</p>
+            </div>
+          </div>
+          <div class="width-50 company-address">New York, USA</div>
+          <div class="width-50 company-opening">25 Job Opening </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-------FEATURE SECTION FEATURE SECTION FEATURE SECTION------->
+<div class="width-100 feature-sect">
+    <div class="container">
+      <div class="width-50">
+        <div class="feature-panel">
+          <h4 class="feature-title">DO YOU WANT TO FIND A JOB ?</h4>
+          <p class="feature-desc">It look like readable English. Many desktop publishing packagesand web page 
+            editors now use Lorem Ipsum as their default model text</p>
+          <button class="feature-btn">Find Job</button>
+        </div>
+      </div>
+      <div class="width-50">
+        <div class="feature-panel">
+          <h4 class="feature-title"> ARE YOU LOOKING FOR A CANDIDATE ?</h4>
+          <p class="feature-desc">It look like readable English. Many desktop publishing packagesand 
+            web page editors now use Lorem Ipsum as their default model text</p>
+          <button class="feature-btn">Find Workers</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Contact Section -->
   <section class="contact-section">
     <div class="container">
@@ -113,5 +523,6 @@
   </section>
 
   <script src="./Js/script.js"></script>
-</body>
-</html>
+  </html>
+    
+  </body>
