@@ -33,7 +33,8 @@ I styled using CSS to make it visually appealing and added some size to the font
 In Html, I just called the variables and added a voting button functionality that is done with js where
 it enables the button to create dynamically updating content, control multimedia, animate images, and pretty much everything else.
 
-
+#### Below is my Figma design
+![Screenshot from 2023-07-07 22-32-18](https://github.com/Fauziahalsey/jobapplication-managementsystem/assets/113023645/f60811ec-c8e1-4eb4-a61a-168b740c43b5)
 
 #### Installation
 
