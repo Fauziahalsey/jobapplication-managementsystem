@@ -46,12 +46,13 @@ body {
   
   .search {
     background-color: #f4f4f4;
-    padding: 20px;
+    padding: 300px;
   }
   
   .search-container {
     display: flex;
     align-items: center;
+    height: 20px;
   }
   
   .input-container {
