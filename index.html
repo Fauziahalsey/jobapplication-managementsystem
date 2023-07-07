@@ -2,247 +2,93 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-   
-      <title>Search Job portal</title>
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="./Css/style.css">
-      
-    
-
+    <title>Jobs portal</title>
+    <link rel="stylesheet" href="./Css/style.css">    
+    <link rel="stylesheet" href="./assets/styles/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">                
+                <img src="./imgs/job-search-portal-low-resolution-logo-black-on-transparent-background.png" alt="logo">
+            </div>
+            <nav class="width-50">
+                <ul class="header-menu">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Jobs</a></li>
+                  <li><a href="#">Companies</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>           
+        </div>
+    </header>
 
-</html>
-  <body>
- <header>
-    <div class="width-100">
-      <div class="container header">
-        <div class="width-25">
-          <!-- <img src="images/logo.png"> -->
+    <!-- search Bar -->
+    <div class="search">
+        <div class="search-container">
+            <div class="input-container">
+                <i class="fas fa-search"></i>
+                <input type="text" id="filter-jobs" name="filter-jobs" placeholder="Filter by search">
+            </div>
+            <div class="btn-container">
+                <button class="find-jobs-button">Find Jobs</button>
+            </div>
         </div>
-        <div class="width-50">
-          <ul class="header-menu ">
-            <li>
-              <a href="#">Home </a>
-            </li>
-            <li>
-              <a href="#">Jobs </a>
-            </li>
-            <li>
-              <a href="#">Companies </a>
-            </li>
-            <li>
-              <a href="#">Services </a>
-            </li>
-            <li>
-              <a href="#">Contact Us </a>
-            </li>
-          </ul>
-        </div>
-        <div class="width-25">
-          <a href="#" class="button-job-post">
-            <i class="fa fa-shopping-bag" aria-hidden="true"></i> Submit a Job </a>
-          <a href="#" class="button-resume">
-            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Post a job </a>
-        </div>
-      </div>
     </div>
-  </header>
-  <!------SEARCH SECTION SEARCH SECTION SEARCH SECTION ------>
-<div class="width-100 banner-section">
-    <div class="container">
-      <h1 class="banner-heading">Find The Best Job For Your Future</h1>
-      <p class="banner-para">its a long established fact that a reader will be distracted by the readable</p>
-      <div class="search-sect">
-        <input type="text" class="search-textbox" placeholder="Search Company">
-      </div>
-      <div class="search-sect">
-        <input type="text" class="search-textbox" placeholder="Select Location">
-        <i class="fa fa-life-ring icons" aria-hidden="true"></i>
-      </div>
-      <div class="search-sect">
-        <input type="text" class="search-textbox" placeholder="All categories">
-        <i class="fa fa-caret-down icons" aria-hidden="true"></i>
-      </div>
-      <div class="search-sect">
-        <button class="search-button">
-          <i class="fa fa-search " aria-hidden="true"></i> Search Here </button>
-      </div>
+
+    <!-- Jobs Container -->
+    <div class="job-container">
+        <div class="job-container-heading">Showing All Jobs</div>
+        <div class="job-tile-container">
+            <!-- Job tiles start --> 
+            <div class="skill-section">
+                <div class="container">
+                  <div class="skill-list">
+                    <div class="skill-img-container">
+                        <img src="./imgs/CARE.jpeg" alt="skill-img">
+                    </div>
+                    <div class="skill-details">
+                      <h4>Customer Service</h4>
+                      <button class="view-button">7,600 jobs</button>
+                    </div>
+                  </div>
+                  <div class="skill-list">
+                    <div class="skill-img-container">
+                        <img src="./imgs/IDEA.jpeg" alt="skill-img">
+                    </div>
+                    <div class="skill-details">
+                      <h4>Design and Creative</h4>
+                      <button class="view-button">5,000 jobs</button>
+                    </div>
+                  </div>
+                  <div class="skill-list">
+                    <div class="skill-img-container">
+                        <img src="./imgs/PM.jpeg" alt="skill-img">
+                    </div>
+                    <div class="skill-details">
+                      <h4>Product Management</h4>
+                      <button class="view-button">1,100 jobs</button>
+                    </div>
+                  </div>
+                  <div class="skill-list">
+                    <div class="skill-img-container">
+                        <img src="./imgs/IT.png" alt="skill-img">
+                    </div>
+                    <div class="skill-details">
+                      <h4>Information Technology</h4>
+                      <button class="view-button">2,345 jobs</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- Job tiles end -->
+        </div>
     </div>
-  </div>
-  <!------CATEGORY SECTION CATEGORY SECTION CATEGORY SECTION ------>
-<div class="width-100 skill-section">
-    <div class="container">
-      <div class="skill-list">
-        <div class="width-33">
-          <!-- <img class="skill-img" src="images/skill-1.png"> -->
-        </div>
-        <div class="width-66">
-          <h4>customer service</h4>
-          <button class="view-button">7,600 jobs</button>
-        </div>
-      </div>
-      <div class="skill-list">
-        <div class="width-33">
-          <!-- <img class="skill-img" src="images/skill-2.png"> -->
-        </div>
-        <div class="width-66">
-          <h4>Design and creative</h4>
-          <button class="view-button">5,000 jobs</button>
-        </div>
-      </div>
-      <div class="skill-list">
-        <div class="width-33">
-          <!-- <img class="skill-img" src="images/skill-3.png"> -->
-        </div>
-        <div class="width-66">
-          <h4>product management</h4>
-          <button class="view-button">1,100 jobs</button>
-        </div>
-      </div>
-      <div class="skill-list">
-        <div class="width-33">
-          <!-- <img class="skill-img" src="images/skill-4.png"> -->
-        </div>
-        <div class="width-66">
-          <h4>information technology</h4>
-          <button class="view-button">2,345 jobs</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-----RECENT JOB SECTION RECENT JOB SECTION RECENT JOB SECTION ----->
-<div class="width-100 recent-job">
-    <div class="container">
-      <h2 class="recent-job-heading">RECENT JOB</h2>
-      <p class="recent-job-sub-heading">Get the list of all recent jobs</p>
-      <!-----JOB LIST----->
-      <div class="width-50">
-        <div class="recent-job-list">
-          <div class="width-100">
-            <h4 class="job-title">HTML Designer</h4>
-          </div>
-          <div class="width-100">
-            <p class="job-skill">
-              <b>Skills : </b>HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP, PHOTOSHOP
-            </p>
-          </div>
-          <div class="width-100">
-            <a href="#" class="job-apply-button">Apply Now</a>
-          </div>
-        </div>
-      </div>
-      <!-----JOB LIST------>
-      <div class="width-50">
-        <div class="recent-job-list">
-          <div class="width-100">
-            <h4 class="job-title">CSS Designer</h4>
-          </div>
-          <div class="width-100">
-            <p class="job-skill">
-              <b>Skills : </b>HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP, PHOTOSHOP
-            </p>
-          </div>
-          <div class="width-100">
-            <a href="#" class="job-apply-button">Apply Now</a>
-          </div>
-        </div>
-      </div>
-      <!-----JOB LIST----->
-      <div class="width-50">
-        <div class="recent-job-list">
-          <div class="width-100">
-            <h4 class="job-title">Bootstrap Developer</h4>
-          </div>
-          <div class="width-33">
-          </div>
-          <div class="width-100">
-            <p class="job-skill">
-              <b>Skills : </b>HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP, PHOTOSHOP
-            </p>
-          </div>
-          <div class="width-100">
-            <a href="#" class="job-apply-button">Apply Now</a>
-          </div>
-        </div>
-      </div>
-      <!-----JOB LIST----->
-      <div class="width-50">
-        <div class="recent-job-list">
-          <div class="width-100">
-            <h4 class="job-title">Javascript Developer</h4>
-          </div>
-          <div class="width-100">
-            <p class="job-skill">
-              <b>Skills : </b>HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP, PHOTOSHOP
-            </p>
-          </div>
-          <div class="width-100">
-            <a href="#" class="job-apply-button">Apply Now</a>
-          </div>
-        </div>
-      </div>
-      <!-----JOB LIST----->
-      <div class="width-50">
-        <div class="recent-job-list">
-          <div class="width-100">
-            <h4 class="job-title">Graphic Designer</h4>
-          </div>
-          <div class="width-100">
-            <p class="job-skill">
-              <b>Skills : </b>HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP, PHOTOSHOP
-            </p>
-          </div>
-          <div class="width-100">
-            <a href="#" class="job-apply-button">Apply Now</a>
-          </div>
-        </div>
-      </div>
-      <!-----JOB LIST------>
-      <div class="width-50">
-        <div class="recent-job-list">
-          <div class="width-100">
-            <h4 class="job-title">jQuery Developer</h4>
-          </div>
-          <div class="width-100">
-            <p class="job-skill">
-              <b>Skills : </b>HTML, CSS, JAVASCRIPT, JQUERY, BOOTSTRAP, PHOTOSHOP
-            </p>
-          </div>
-          <div class="width-100">
-            <a href="#" class="job-apply-button">Apply Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-------FEATURE SECTION FEATURE SECTION FEATURE SECTION------->
-<div class="width-100 feature-sect">
-    <div class="container">
-      <div class="width-50">
-        <div class="feature-panel">
-          <h4 class="feature-title">DO YOU WANT TO FIND A JOB ?</h4>
-          <p class="feature-desc">actively looking for a job right now, but you can say you are open to opportunities.
-            ,Yes, I'm actively looking for a job.or are not sure if you want to find a job right now or still exploring your options</p>
-          <button class="feature-btn">Find Job</button>
-        </div>
-      </div>
-      <div class="width-50">
-        <div class="feature-panel">
-          <h4 class="feature-title"> ARE YOU LOOKING FOR A WORKER ?</h4>
-          <p class="feature-desc"> always looking for new opportunities to grow my career,
-            you currently looking for a new job that aligns with my career goals.
-            are actively looking for a job right now, but I'm always keeping my eyes open.
-          </p>
-          <button class="feature-btn">Find Workers</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
   <!-- Contact Section -->
   <section class="contact-section">
     <div class="container">
@@ -252,12 +98,9 @@
           <h3 class="contact-subtitle">Get in Touch</h3>
           <p class="contact-description">If you have any inquiries or need assistance, feel free to contact us using the information below:</p>
           <ul class="contact-details">
-            <li><i class="material-icons" style="font-size:24px;color:red">add_location</i>
-                123 Karanja Main Street, NAIROBI, KENYA</li>
-            <li><i class="fa fa-envelope" style="font-size:24px;color:red"></i>
-                fauzia@gmail.com</li>
-            <li><i class="fa fa-phone" style="font-size:24px;color:red"></i>
-                +1 254 7937179</li>
+            <li><i class="material-icons">add_location</i>123 Karanja Main Street, NAIROBI, KENYA</li>
+            <li><i class="fa fa-envelope"></i>fauzia@gmail.com</li>
+            <li><i class="fa fa-phone"></i>+1 254 7937179</li>
           </ul>
         </div>
         <div class="contact-form">
@@ -280,6 +123,6 @@
   </section>
 
   <script src="./Js/script.js"></script>
-  </html>
-    
-  </body>
+
+</body>
+</html>
