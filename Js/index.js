@@ -74,3 +74,48 @@ async function Search_main(){
         console.log('jobs shown successfully');
     }
 }
+  
+document.addEventListener('DOMContentLoaded', function() {
+    // Login Form
+    const loginForm = document.querySelector('.center form');
+    const signInCount = localStorage.getItem('signInCount') || 0;
+  
+    loginForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+  
+      const username = document.querySelector('input[name="username"]').value;
+      const password = document.querySelector('input[name="password"]').value;
+  
+      // Replace this code with actual server-side authentication logic
+      // Simulating a successful login for demonstration purposes
+      if (username === 'admin' && password === 'password') {
+        // Increment sign-in count
+        localStorage.setItem('signInCount', parseInt(signInCount) + 1);
+  
+        // Display sign-in count and congratulation message
+        alert(`Congratulations! You have signed in.\n\nTotal Sign-ins: ${parseInt(signInCount) + 1}`);
+      } else {
+        alert('Invalid username or password!');
+      }
+  
+      loginForm.reset();
+    });
+  
+    // Contact Form
+    const contactForm = document.querySelector('.contact-form form');
+    contactForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+  
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+  
+      // Replace this code with actual form submission logic
+      // Simulating a successful form submission for demonstration purposes
+      alert(`Your message has been sent successfully!\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+  
+      contactForm.reset();
+    });
+  });
+  
+  
