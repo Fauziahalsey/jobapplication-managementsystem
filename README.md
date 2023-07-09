@@ -34,6 +34,7 @@ In Html, I just called the variables and added a voting button functionality tha
 it enables the button to create dynamically updating content, control multimedia, animate images, and pretty much everything else.
 
 #### Below is my Figma design
+![Screenshot from 2023-07-09 20-47-46](https://github.com/Fauziahalsey/jobapplication-managementsystem/assets/113023645/9637bf41-8160-4913-bb2c-41a7e4a0006f)
 
 #### Installation
 
