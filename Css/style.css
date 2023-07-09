@@ -66,16 +66,20 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
+    
   }
   #meo{
-background-color: #C4FE76;
-color: #000;
-#jobList{
-    background-color: #fffcfc;
-}
+     background-color: #C4FE76;
+     color: #000;
+
   }
+  #jobList {
+    background-color: #fffcfc;
+    border: 1px solid black;
+
+}
   .job {
-    border: 1px solid #ccc;
+    border: 2px solid #0a0909;
     padding: 20px;
   }
   
