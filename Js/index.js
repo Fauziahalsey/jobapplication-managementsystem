@@ -192,11 +192,11 @@ const jobs = [
       }
   ];
   
-  // Function to display jobs
-  function displayJobs(jobs) {
+ // Function to display jobs
+function displayJobs(jobs) {
     const jobList = document.getElementById("jobList");
     jobList.innerHTML = "";
-    jobs.forEach(job => {
+    jobs.forEach((job) => {
       const div = document.createElement("div");
       div.className = "job";
       const content = `
@@ -206,7 +206,9 @@ const jobs = [
         <p><strong>Location:</strong> ${job.location}</p>
         <p>${job.requirements.intro}</p>
         <p>${job.requirements.content}</p>
-        <ul>${job.requirements.items.map(item => `<li>${item}</li>`).join("")}</ul>
+        <ul>${job.requirements.items
+          .map((item) => `<li>${item}</li>`)
+          .join("")}</ul>
         <p><a href="${job.website}" target="_blank">Company Website</a></p>
         <p><a href="${job.applicationLink}" target="_blank">Apply Now</a></p>
       `;
@@ -216,10 +218,13 @@ const jobs = [
   }
   
   // Event listener for job search
-  document.getElementById("searchInput").addEventListener("input", function() {
+  document.getElementById("searchInput").addEventListener("input", function () {
     const searchTerm = this.value.toLowerCase();
-    const filteredJobs = jobs.filter(job => {
-      return job.roleName.toLowerCase().includes(searchTerm) || job.company.toLowerCase().includes(searchTerm);
+    const filteredJobs = jobs.filter((job) => {
+      return (
+        job.roleName.toLowerCase().includes(searchTerm) ||
+        job.company.toLowerCase().includes(searchTerm)
+      );
     });
     displayJobs(filteredJobs);
   });
@@ -227,81 +232,58 @@ const jobs = [
   // Initial display of all jobs
   displayJobs(jobs);
   
+  // Search functionality
+  let inpField_el = document.getElementById("filter-jobs");
   
-  // Event listener for job search
-  document.getElementById("searchInput").addEventListener("input", function() {
-    const searchTerm = this.value.toLowerCase();
-    const filteredJobs = jobs.filter(job => {
-      return job.roleName.toLowerCase().includes(searchTerm) || job.company.toLowerCase().includes(searchTerm);
-    });
-    displayJobs(filteredJobs);
-  });
+  let find_btn = document.querySelector(".btn-container");
+  find_btn.addEventListener("click", Search_main);
   
-  // Initial display of all jobs
-  displayJobs(jobs);
-  
-  
-  // Event listener for job search
-  document.getElementById("searchInput").addEventListener("input", function() {
-    const searchTerm = this.value.toLowerCase();
-    const filteredJobs = jobs.filter(job => {
-      return job.roleName.toLowerCase().includes(searchTerm) || job.company.toLowerCase().includes(searchTerm);
-    });
-    displayJobs(filteredJobs);
-  });
-  
-  // Initial display of all jobs
-  displayJobs(jobs);
-  
-// ===================================================
-// ======== SEARCH FUNCTIONALITY =================
-// --------------------------------------------------
-let inpField_el= document.getElementById('filter-jobs') 
-
-let find_btn= document.querySelector('.btn-container')
-find_btn.addEventListener('click',Search_main);
-
-async function searchDB(searchTxt, Jobs){ 
-    let searched_Job= []
-    for (let job of Jobs){
-        let tmpJob= await searchJob(job,searchTxt) 
-        console.log('job found is:',tmpJob);
-        if (tmpJob){
-            searched_Job.push(tmpJob)
-        }        
+  async function searchDB(searchTxt, Jobs) {
+    let searched_Job = [];
+    for (let job of Jobs) {
+      let tmpJob = await searchJob(job, searchTxt);
+      console.log("job found is:", tmpJob);
+      if (tmpJob) {
+        searched_Job.push(tmpJob);
+      }
     }
-    if (searched_Job){
-        return searched_Job;
-    }else{
-        return;
+    if (searched_Job.length > 0) {
+      return searched_Job;
+    } else {
+      return null;
     }
-}
-async function searchJob(job,searchTxt){
+  }
+  
+  async function searchJob(job, searchTxt) {
     // logic for searching job
-    console.log('searchJob: user asked for',searchTxt);
-    if ((job.roleName.toLowerCase().includes(searchTxt))||(job.requirements.content.toLowerCase().includes(searchTxt))){
-        console.log('searchJob: found this=> ',job);
-        return job;
-    }else{
-        return;
+    console.log("searchJob: user asked for", searchTxt);
+    if (
+      job.roleName.toLowerCase().includes(searchTxt) ||
+      job.requirements.content.toLowerCase().includes(searchTxt)
+    ) {
+      console.log("searchJob: found this=> ", job);
+      return job;
+    } else {
+      return null;
     }
-}
-async function Search_main(){
-    if (inpField_el.value){
-        let all_jobs= await fetchData()
-        let filtered_jobs= await searchDB(inpField_el.value, all_jobs)
-        console.log(filtered_jobs);
-        showJobs(filtered_jobs)
-        console.log('jobs shown successfully');
-    }
-}
+  }
   
-document.addEventListener('DOMContentLoaded', function() {
+  async function Search_main() {
+    if (inpField_el.value) {
+      let all_jobs = await fetchData();
+      let filtered_jobs = await searchDB(inpField_el.value, all_jobs);
+      console.log(filtered_jobs);
+      showJobs(filtered_jobs);
+      console.log("jobs shown successfully");
+    }
+  }
+  
+  document.addEventListener("DOMContentLoaded", function () {
     // Login Form
-    const loginForm = document.querySelector('.center form');
-    const signInCount = localStorage.getItem('signInCount') || 0;
+    const loginForm = document.querySelector(".center form");
+    const signInCount = localStorage.getItem("signInCount") || 0;
   
-    loginForm.addEventListener('submit', function(event) {
+    loginForm.addEventListener("submit", function (event) {
       event.preventDefault();
   
       const username = document.querySelector('input[name="username"]').value;
@@ -309,34 +291,37 @@ document.addEventListener('DOMContentLoaded', function() {
   
       // Replace this code with actual server-side authentication logic
       // Simulating a successful login for demonstration purposes
-      if (username === 'admin' && password === 'password') {
+      if (username === "admin" && password === "password") {
         // Increment sign-in count
-        localStorage.setItem('signInCount', parseInt(signInCount) + 1);
+        localStorage.setItem("signInCount", parseInt(signInCount) + 1);
   
         // Display sign-in count and congratulation message
-        alert(`Congratulations! You have signed in.\n\nTotal Sign-ins: ${parseInt(signInCount) + 1}`);
+        alert(
+          `Congratulations! You have signed in.\n\nTotal Sign-ins: ${
+            parseInt(signInCount) + 1
+          }`
+        );
       } else {
-        alert('Invalid username or password!');
+        alert("Invalid username or password!");
       }
   
       loginForm.reset();
     });
   
     // Contact Form
-    const contactForm = document.querySelector('.contact-form form');
-    contactForm.addEventListener('submit', function(event) {
+    const contactForm = document.querySelector(".contact-form form");
+    contactForm.addEventListener("submit", function (event) {
       event.preventDefault();
   
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
   
       // Replace this code with actual form submission logic
       // Simulating a successful form submission for demonstration purposes
-      alert(`Your message has been sent successfully!\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+      const confirmationMessage = `Your message has been sent successfully!\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+      alert(confirmationMessage); // Display an alert message
   
       contactForm.reset();
     });
   });
-  
-  
